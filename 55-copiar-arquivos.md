@@ -1,4 +1,16 @@
-:pushpin: Copiar Arquivos utilizando Icetool
+:pushpin: Título do Roteiro
+
+:point_right: Descrição do(s) cenário(s) em que este roteiro pode ser aplicadado
+
+:compass: Palavras-chave para facilitar a indexação das buscas
+
+:book: Detalhamento dos procedimentos, entradas necessárias e resultados esperados
+
+:globe_with_meridians: Referências técnicas
+
+--------------
+
+:pushpin: Copiar Arquivos utilizando ICETOOL
 
 :point_right: O poder computacional do DFSORT, que disponibiliza o utilitário multi propósito chamado ICETOOL, permite trabalhar com grandes volumes de dados, sejam em arquivos únicos ou vários arquivos. Neste roteiro utilizaremos a característica de copiar arquivos. No link das referências é possível encontar mais detalhes sobre seu funcionamento e outros exemplos.
 
@@ -6,7 +18,9 @@
 
 :book: O job a seguir recebe como entrada um arquivo INPUT e cataloga um arquivo OUTPUT contendo as mesmas informações do arquivo de entrada. Se os parâmetros de alocação não corresponderem ao LRECL do arquivo de entrada, os dados serão truncados, nenhuma informação de erro será gerada, terminando com OPERATION RETURN CODE:  00, mas indicando a diferença na quantidade de bytes por registro com a seguinte mensagem:
 
-**SORTOUT LRECL OF Y IS DIFFERENT FROM SORTIN(NN) LRECL OF X - RC=0** 
+```
+SORTOUT LRECL OF Y IS DIFFERENT FROM SORTIN(NN) LRECL OF X - RC=0
+```
 ```jcl
 //JOBNAME JOB (ACCT),'USER',MSGCLASS=X,CLASS=A
 //STEP1 EXEC PGM=ICETOOL
@@ -21,3 +35,30 @@
 ```
 
 :globe_with_meridians: https://www.ibm.com/docs/en/zos/2.4.0?topic=icetool-overview
+
+-----------------------
+
+:pushpin: Copiar Arquivos utilizando IEBGENER
+
+:point_right: O utilitário IEBGENER faz parte do z/OS desde as primeiras versões do OS/360. Diferente do ICETOOL, ele possui limitações que exigem que determinados parâmetros sejam informados sobre o arquivo que se deseja copiar. No link das referências é possível encontar mais detalhes sobre seu funcionamento e outros exemplos.
+
+:compass: copiar, arquivo, IEBGENER, OS/360
+
+:book: O job a seguir recebe como entrada um arquivo SYSUT1 e cataloga um arquivo SYSUT2 contendo as mesmas informações do arquivo de entrada. Se os parâmetros de alocação não corresponderem aos parâmetros de alocação e LRECL do arquivo de entrada, ocorrerá um Abend e o job terminará com RC=12, indicando a seguinte mensagem:
+```
+IEF237I DMY  ALLOCATED TO SYSIN
+IEF142I INEFCOMP IEBGENER - STEP WAS EXECUTED - COND CODE 0012
+```
+JCL:
+```jcl
+//IEBGENER EXEC PGM=IEBGENER                               
+//SYSPRINT DD SYSOUT=*                                     
+//SYSUT1   DD DSN=KC03BFF.JCL.AULA.AULA06.V003B,DISP=SHR   
+//SYSUT2   DD DSN=KC03BFF.IEBGENER.COPY1,                  
+//            DISP=(NEW,CATLG,DELETE),                     
+//            DCB=(RECFM=FB,LRECL=140,BLKSIZE=0),UNIT=3390,
+//            SPACE=(TRK,(1,1))                            
+//SYSIN    DD DUMMY                                        
+```
+
+:globe_with_meridians: https://www.ibm.com/docs/en/zos-basic-skills?topic=utilities-iebgener-utility-generate-copy-sequential-data-set
