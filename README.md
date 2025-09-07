@@ -55,7 +55,7 @@ Significado dos ícones encontrados nos textos a seguir:
     1.  ordenação de registros
     2.  contagem de ocorrências
     3.  separar determinados registros em novos arquivos
-    4.  copiar arquivos
+    4.  [copiar arquivos](https://github.com/ds9net/INEFE/blob/Roteiros/55-copiar-arquivos.md)
     5.  alocar/excluir arquivos
     6.  extrair informações de um JCL (IEBEDIT)
     7.  comparar conteúdo de arquivos
