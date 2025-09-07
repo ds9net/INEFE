@@ -4,7 +4,7 @@ GitHub utilizado na Gestão do Conhecimento:  uma abordagem prática de document
 
 **Orientadora: Msc. Profa. Ana Cristina B.R. Silva** 
 
-**Significado dos ícones encontrados os textos a seguir:**
+Significado dos ícones encontrados nos textos a seguir:
 
    :pushpin: Título do Roteiro
    
