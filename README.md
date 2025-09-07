@@ -54,8 +54,8 @@ Significado dos ícones encontrados nos textos a seguir:
 - Exemplos de Jobs prontos para:
     1.  ordenação de registros
     2.  contagem de ocorrências
-    3.  separar determinados registros em novos arquivos
-    4.  copiar arquivos
-    5.  alocar/excluir arquivos
+    3.  separar determinados registros em novos arquivos    
+    4.  alocar/excluir arquivos
+    5.  [copiar arquivos](https://github.com/ds9net/INEFE/blob/Roteiros/55-copiar-arquivos.md)
     6.  extrair informações de um JCL (IEBEDIT)
     7.  comparar conteúdo de arquivos
