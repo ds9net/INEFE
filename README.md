@@ -8,7 +8,7 @@ Significado dos ícones encontrados nos textos a seguir:
 
    :pushpin: Título do Roteiro
    
-   :point_right: Descrição do(s) cenário(s) em que este roteiro pode ser aplicadado
+   :point_right: Descrição do(s) cenário(s) em que este roteiro pode ser aplicado
    
    :compass: Palavras-chave para facilitar a indexação das buscas
    
