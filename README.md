@@ -3,6 +3,7 @@
 **Aluno: Esmet Mustafá Ammar**
 
 **Orientadora: Msc. Profa. Ana Cristina B.R. Silva** 
+<img width="1476" height="781" alt="TN3270-Marist1" src="https://github.com/user-attachments/assets/89e7a9d9-305f-4aed-a682-d6d42a6f7687" />
 
 Significado dos ícones encontrados nos textos a seguir:
 
@@ -17,6 +18,7 @@ Significado dos ícones encontrados nos textos a seguir:
    :globe_with_meridians: Referências técnicas
 
 >  Os roteiros a seguir tem o propósito de sintetizar o conhecimento adquirido em mais de 400 horas de treinamento. Em cada um são indicadas as referências aos sites oficiais da IBM que detalham as características e múltiplos parâmetros das ferramentas utilizadas. 
+<img width="485" height="210" alt="TN3270-Marist2" src="https://github.com/user-attachments/assets/d6cc8918-324f-4232-8048-0a145ceab3f6" />
 
 ## 1) Coleta de Dados do sistema
 - SMF/RMF: registros de execução e performance (CPU, memória, I/O, workloads).
