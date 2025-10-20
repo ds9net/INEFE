@@ -14,9 +14,9 @@
 
 :point_right: O poder computacional do SORT/DFSORT, que disponibiliza o utilitário multi propósito chamado ICETOOL, permite trabalhar com grandes volumes de dados, sejam em arquivos únicos ou vários arquivos. 
 
-Neste roteiro utilizaremos a característica de batimento ou balanced line de arquivos. Este processo utiliza um campo chave que possui conteúdo comum entre os dois arquivos. 
+Neste roteiro utilizaremos a característica de batimento ou balanced-line de arquivos. Este processo utiliza um campo chave que possui conteúdo comum entre os dois arquivos. 
 
-:compass: copiar, arquivo, ICETOOL, DFSORT
+:compass: Balanced-line, batimento, joinkeys, ICETOOL, DFSORT
 
 :book: O job a seguir compara dois arquivos em busca dos registros que possuem a mesma chave, gerando um arquivo de saída com os dados que são comuns aos dois registros (joinkeys).
 
