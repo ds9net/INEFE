@@ -25,7 +25,7 @@ Outros exemplos de contagem de ocorrências podem ser encontrados no link das re
 Se compararmos com instrução SQL, seria o equivalente a:
 ```sql
 Select campo-1a12, count(*)
-groyp by campo-1a12:
+groyp by campo-1a12;
 ```
 
 JCL:
