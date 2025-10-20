@@ -41,7 +41,7 @@ ERRO:
 IEFA107I JOB04 STEP01 APAGAR - DATA SET KC03BFF.ANTIGO.ARQUIVO NOT FOUND
 ```
 
-O ajuste abaixo evita o erro ao deletar o arquivo Antigo:
+O ajuste abaixo evita o erro ao apagar/deletar/desalocar o arquivo Antigo:
 ```jcl
 //JOB04   JOB (INEFE),'ALOCA E DESALOCA',CLASS=A,MSGLEVEL=(1,1),  
 //        MSGCLASS=C,REGION=0M,NOTIFY=&SYSUID                     
