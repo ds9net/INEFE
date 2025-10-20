@@ -56,7 +56,7 @@ Significado dos ícones encontrados nos textos a seguir:
 - Exemplos de Jobs prontos para:
     1.  [ordenação de registros](https://github.com/ds9net/INEFE/blob/Roteiros/r5-01-ordena%C3%A7%C3%A3o-de-registros.md)
     2.  [contagem de ocorrências](https://github.com/ds9net/INEFE/blob/Roteiros/r5-02-contagem-de-ocorr%C3%AAncias.md)
-    3.  separar determinados registros em novos arquivos    
+    3.  [separar determinados registros em novos arquivos](https://github.com/ds9net/INEFE/blob/Roteiros/r5-03-separar-determinados-registros-em-novos-arquivos.md)    
     4.  alocar/excluir arquivos
     5.  [copiar arquivos](https://github.com/ds9net/INEFE/blob/Roteiros/r5-05-copiar-arquivos.md)
     6.  extrair informações de um JCL
