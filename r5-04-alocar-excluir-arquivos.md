@@ -27,4 +27,14 @@ JCL:
 //APAGAR DD DSN=MEU.ANTIGO.ARQUIVO,DISP=(OLD,DELETE)
 ```
 
+Se o job acima for executado duas vezes seguidas, ele vai retornar um código de erro devido a existência do arquivo NOVO, criado pela execução anterior, e devido ao arquivo APAGAR não existir mais no sistema. Uma sugestão para evitar estas ocorrências seria esta alteração:
+
+```jcl
+//JOB04  JOB (ACCT),'ALOCA E DESALOCA',MSGCLASS=X,CLASS=A
+//STEP01 EXEC PGM=IEFBR14
+//APAGAR DD DSN=MEU.NOVO.ARQUIVO,DISP=(MOD,DELETE),SPACE=(TRK,(1,1)),                 
+//       UNIT=SYSDA                         
+//NOVO   DD DSN=MEU.NOVO.ARQUIVO,DISP=(NEW,CATLG),VOL=SER=WORK02,
+//       UNIT=3390,SPACE=(CYL,(3,1,25)
+```
 :globe_with_meridians: https://www.ibm.com/docs/en/zos-basic-skills?topic=utilities-iefbr14-utility-do-almost-nothing
