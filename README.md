@@ -54,7 +54,7 @@ Significado dos ícones encontrados nos textos a seguir:
     5. Utilização de storage acima de thresholds ou contenções.
 ## 5) Jobs reutilizáveis para tarefas rotineiras
 - Exemplos de Jobs prontos para:
-    1.  ordenação de registros
+    1.  [ordenação de registros](https://github.com/ds9net/INEFE/blob/Roteiros/r5-01-ordena%C3%A7%C3%A3o-de-registros.md)
     2.  contagem de ocorrências
     3.  separar determinados registros em novos arquivos    
     4.  alocar/excluir arquivos
