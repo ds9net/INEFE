@@ -20,21 +20,42 @@
 
 JCL:
 ```jcl
-//JOB04  JOB (ACCT),'ALOCA E DESALOCA',MSGCLASS=X,CLASS=A
-//STEP01 EXEC PGM=IEFBR14
-//NOVO   DD DSN=MEU.NOVO.ARQUIVO,DISP=(NEW,CATLG),VOL=SER=WORK02,
-//          UNIT=3390,SPACE=(CYL,(3,1,25)
-//APAGAR DD DSN=MEU.ANTIGO.ARQUIVO,DISP=(OLD,DELETE)
+//JOB04   JOB (INEFE),'ALOCA E DESALOCA',CLASS=A,MSGLEVEL=(1,1),  
+//        MSGCLASS=C,REGION=0M,NOTIFY=&SYSUID                     
+//* -------------------------------------                         
+//STEP01  EXEC PGM=IEFBR14                                        
+//APAGAR  DD DSN=KC03BFF.ANTIGO.ARQUIVO,DISP=(OLD,DELETE), 
+//        DCB=(RECFM=FB,LRECL=80,BLKSIZE=0),                      
+//        SPACE=(TRK,(1,1))                                       
+//NOVO    DD DSN=KC03BFF.NOVO.ARQUIVO,DISP=(NEW,CATLG),           
+//        DCB=(RECFM=FB,LRECL=80,BLKSIZE=0),                      
+//        SPACE=(TRK,(1,1))                                       ```
 ```
 
-Se o job acima for executado duas vezes seguidas, ele vai retornar um código de erro devido a existência do arquivo NOVO, criado pela execução anterior, e devido ao arquivo APAGAR não existir mais no sistema. Uma sugestão para evitar estas ocorrências seria esta alteração:
+Se o job acima for executado duas vezes seguidas, ele vai retornar um código de erro devido a existência do arquivo NOVO, criado pela execução anterior, e devido ao arquivo APAGAR não existir mais no sistema. Seguem os erros e tela de execução:
+
+ERRO: 
+<img width="1453" height="450" alt="image" src="https://github.com/user-attachments/assets/6819bba0-eb7a-40a6-88c4-2c41c4e1440a" />
 
 ```jcl
-//JOB04  JOB (ACCT),'ALOCA E DESALOCA',MSGCLASS=X,CLASS=A
-//STEP01 EXEC PGM=IEFBR14
-//APAGAR DD DSN=MEU.NOVO.ARQUIVO,DISP=(MOD,DELETE),SPACE=(TRK,(1,1)),                 
-//       UNIT=SYSDA                         
-//NOVO   DD DSN=MEU.NOVO.ARQUIVO,DISP=(NEW,CATLG),VOL=SER=WORK02,
-//       UNIT=3390,SPACE=(CYL,(3,1,25)
+IEFA107I JOB04 STEP01 APAGAR - DATA SET KC03BFF.ANTIGO.ARQUIVO NOT FOUND
+```
+
+O ajuste abaixo evita o erro ao deletar o arquivo Antigo:
+```jcl
+//JOB04   JOB (INEFE),'ALOCA E DESALOCA',CLASS=A,MSGLEVEL=(1,1),  
+//        MSGCLASS=C,REGION=0M,NOTIFY=&SYSUID                     
+//* -------------------------------------                         
+//STEP01  EXEC PGM=IEFBR14                                        
+//APAGAR  DD DSN=KC03BFF.ANTIGO.ARQUIVO,DISP=(MOD,DELETE,DELETE), 
+//        DCB=(RECFM=FB,LRECL=80,BLKSIZE=0),                      
+//        SPACE=(TRK,(1,1))                                       
+//NOVO    DD DSN=KC03BFF.NOVO.ARQUIVO,DISP=(NEW,CATLG),           
+//        DCB=(RECFM=FB,LRECL=80,BLKSIZE=0),                      
+//        SPACE=(TRK,(1,1))                                       
+```
+Resultado:
+```JCL
+IGD105I KC03BFF.ANTIGO.ARQUIVO                       DELETED,   DDNAME=APAGAR
 ```
 :globe_with_meridians: https://www.ibm.com/docs/en/zos-basic-skills?topic=utilities-iefbr14-utility-do-almost-nothing
