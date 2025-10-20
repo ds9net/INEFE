@@ -14,8 +14,6 @@
 
 :point_right: IEFBR14 é frequentemente utilizado como uma forma controlada de acionar serviços do sistema, como alocação ou exclusão de datasets, sem a necessidade de um programa complexo. Sua execução serve como gatilho para que componentes do sistema z/OS entrem em ação. É uma ferramenta clássica para operações diversas em modo batch.
 
-Outros exemplos de contagem de ocorrências podem ser encontrados no link das referências.
-
 :compass: IEFBR14, alocar, desalocar, arquivos, datasets, jcl
 
 :book: O job a seguir ativa a verificação das instruções JCL quanto a erros de sintaxe, cria o arquivo definido por NOVO mantendo-o alocado ao final da execução do job, em seguida exclui o arquivo definido por APAGAR, desalocando-o ao término do job.
