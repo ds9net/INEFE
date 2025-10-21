@@ -37,7 +37,7 @@
 <img width="1439" height="291" alt="image" src="https://github.com/user-attachments/assets/230de142-22e6-4d8c-88bb-1663fad800e2" />
 
 
-### 3. [Checklist de Diagnóstico](#checklist-de-diagnóstico) para Jobs com retorno diferente de zero (RC ≠ 0):
+### 3. Checklist de Diagnóstico(#checklist-de) para Jobs com retorno diferente de zero (RC ≠ 0):
    
 |RC-Return Code|Significado|Ação Recomendada|
 |--------------|-----------|----------------|
