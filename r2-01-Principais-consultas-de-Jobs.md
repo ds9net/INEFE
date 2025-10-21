@@ -18,7 +18,7 @@
 
 :book: A seguir estão as principais funcionalidades que permitem analisar a execução de um job, diagnosticando eventuais falhas na escrita do JCL, chamada de utilitários ou utilização dos recursos do ambiente (storage, etc).
 
-1. Consultas Principais de Jobs
+### 1. Consultas Principais de Jobs
 
     * SDSF (System Display and Search Facility) - ferramenta utilizada para visualizar e gerenciar jobs no JES (Job Entry Subsystem).
     * Comandos úteis:
@@ -27,7 +27,7 @@
        - LOG – Exibe o log do sistema;
        - HASPLOG – Mostra mensagens do JES. 
     
-2. JESMSGLG / JESYSMSG / JOBLOG
+### 2. JESMSGLG / JESYSMSG / JOBLOG
     * Esses logs são essenciais para entender o comportamento do job:
       - JESMSGLG: Mensagens do JES sobre o job (início, término, alocação de recursos);
       - JESYSMSG: Mensagens do sistema operacional (erros, alocações, chamadas de sistema);
@@ -37,7 +37,7 @@
 <img width="1439" height="291" alt="image" src="https://github.com/user-attachments/assets/230de142-22e6-4d8c-88bb-1663fad800e2" />
 
 
-3. [Checklist de Diagnóstico](#checklist-diagnostico) para Jobs com retorno diferente de zero (RC ≠ 0):
+### 3. [Checklist de Diagnóstico](#checklist-de-diagnóstico) para Jobs com retorno diferente de zero (RC ≠ 0):
    
 |RC-Return Code|Significado|Ação Recomendada|
 |--------------|-----------|----------------|
