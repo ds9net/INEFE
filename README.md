@@ -27,9 +27,9 @@ Significado dos ícones encontrados nos textos a seguir:
     
 ## 2) Análise de Jobs
 
-- Principais consultas de Jobs: SDSF, JESMSGLG/JESYSMSG/JOBLOG.
+- [Principais consultas de Jobs: SDSF, JESMSGLG/JESYSMSG/JOBLOG.](https://github.com/ds9net/INEFE/blob/Roteiros/r2-01-Principais-consultas-de-Jobs.md)
     
-- Checklist de diagnóstico para jobs anormais (JCL errors, RC≠0)
+- [Checklist de diagnóstico para jobs anormais (JCL errors, RC≠0)](https://github.com/ds9net/INEFE/edit/Roteiros/r2-01-Principais-consultas-de-Jobs.md#checklist-diagnostico)
     1. RC 04 → Warning (revisar lógica);
     2. RC 08/12 → Erro esperado de aplicação;
     3. RC 16/20+ → Falha estrutural ou de ambiente.    
