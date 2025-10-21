@@ -3,6 +3,8 @@
 **Aluno: Esmet Mustafá Ammar**
 
 **Orientadora: Msc. Profa. Ana Cristina B.R. Silva** 
+
+
 <img width="1476" height="781" alt="TN3270-Marist1" src="https://github.com/user-attachments/assets/89e7a9d9-305f-4aed-a682-d6d42a6f7687" />
 
 Significado dos ícones encontrados nos textos a seguir:
@@ -21,7 +23,7 @@ Significado dos ícones encontrados nos textos a seguir:
 <img width="485" height="210" alt="TN3270-Marist2" src="https://github.com/user-attachments/assets/d6cc8918-324f-4232-8048-0a145ceab3f6" />
 
 ## 1) Coleta de Dados do sistema
-- SMF/RMF: registros de execução e performance (CPU, memória, I/O, workloads).
+- [SMF/RMF: registros de execução e performance (CPU, memória, I/O, workloads).](https://github.com/ds9net/INEFE/blob/Roteiros/r1-01-SMF-RMF-registros-de-execu%C3%A7%C3%A3o-performance.md)
     
 ## 2) Análise de Jobs
 
