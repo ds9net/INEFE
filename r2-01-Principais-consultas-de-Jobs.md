@@ -15,16 +15,16 @@
 :point_right: As execuções dos jobs no Mainframe IBM geram um conjunto de logs específicos, detalhando o status de cada step (JESMSGLG), o status de interação com o sistema operacional (JESYSMSGLG) e as mensagens de geradas pela execução do job (JOBLOG). Todos estes detalhes estão disponíveis para consulta e interação via SDSF (System Display and Search Facility). 
 
 Este roteiro detalhará os seguintes tópicos:
-1. [Consultas Principais de Jobs](#1.-consultas-principais-de-jobs)
-2. [JESMSGLG / JESYSMSG / JOBLOG](#2.-jesmsgl)
-3. [Checklist de Diagnóstico](#3.-checklist-de-diagnóstico)
-4. [Etapas para Diagnóstico](#4.-etapas-para-diagnóstico)
+1. [Consultas Principais de Jobs](#consultas-principais-de-jobs)
+2. [JESMSGLG / JESYSMSG / JOBLOG](#jesmsglg)
+3. [Checklist de Diagnóstico](#checklist-de-diagnóstico)
+4. [Etapas para Diagnóstico](#etapas-para-diagnóstico)
 
 :compass: SDSF, JES, JESMSGLB, JESYSMSG, datasets, jcl, fila DA, fila ST, fila H.
 
 :book: A seguir estão as principais funcionalidades que permitem analisar a execução de um job, diagnosticando eventuais falhas na escrita do JCL, chamada de utilitários ou utilização dos recursos do ambiente (storage, etc).
 
-# 1. Consultas Principais de Jobs
+# Consultas Principais de Jobs
 
     * SDSF (System Display and Search Facility) - ferramenta utilizada para visualizar e gerenciar jobs no JES (Job Entry Subsystem).
     * Comandos úteis:
@@ -33,7 +33,7 @@ Este roteiro detalhará os seguintes tópicos:
        - LOG – Exibe o log do sistema;
        - HASPLOG – Mostra mensagens do JES. 
     
-# 2. JESMSGLG / JESYSMSG / JOBLOG
+# JESMSGLG / JESYSMSG / JOBLOG
     * Esses logs são essenciais para entender o comportamento do job:
       - JESMSGLG: Mensagens do JES sobre o job (início, término, alocação de recursos);
       - JESYSMSG: Mensagens do sistema operacional (erros, alocações, chamadas de sistema);
@@ -43,7 +43,7 @@ Este roteiro detalhará os seguintes tópicos:
 <img width="1439" height="291" alt="image" src="https://github.com/user-attachments/assets/230de142-22e6-4d8c-88bb-1663fad800e2" />
 
 
-# 3. Checklist de Diagnóstico para Jobs com retorno diferente de zero (RC ≠ 0)
+# Checklist de Diagnóstico para Jobs com retorno diferente de zero (RC ≠ 0)
    
 |RC-Return Code|Significado|Ação Recomendada|
 |--------------|-----------|----------------|
@@ -51,7 +51,7 @@ Este roteiro detalhará os seguintes tópicos:
 |RC 08 / RC 12|Erro esperado de aplicação – O job falhou por erro de lógica ou dados.|Verificar mensagens de erro no JESYSMSG e JOBLOG. Validar parâmetros de entrada, arquivos utilizados, e lógica do programa. Pode ser necessário ajustar o código ou os dados.|
 |RC 16 / RC 20+|Falha estrutural ou de ambiente – Erros graves.|Investigar alocação de recursos, permissões, ausência de datasets, problemas de compilação. Verificar mensagens no JESMSGLG e JESYSMSG. Pode indicar falhas no ambiente ou infraestrutura.|
 
-# 4. Etapas para Diagnóstico
+# Etapas para Diagnóstico
 1. Identificar o Job: Localize o job via SDSF (ST ou H) e anote o Job ID. 
 2. Verificar Logs: Acesse JESMSGLG, JESYSMSG e JOBLOG para entender o fluxo e identificar mensagens de erro.
 3. Analisar RC: Verifique o código de retorno (RC) e aplique o checklist acima.
