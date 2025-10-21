@@ -16,7 +16,7 @@
 
 Este roteiro detalhará os seguintes tópicos:
 1. [Consultas Principais de Jobs](#consultas-principais-de-jobs)
-2. [JESMSGLG / JESYSMSG / JOBLOG](#jesmsglg)
+2. [Logs dos Jobs](#Logs-dos-Jobs)
 3. [Checklist de Diagnóstico](#checklist-de-diagnóstico)
 4. [Etapas para Diagnóstico](#etapas-para-diagnóstico)
 
@@ -29,11 +29,16 @@ Este roteiro detalhará os seguintes tópicos:
     * SDSF (System Display and Search Facility) - ferramenta utilizada para visualizar e gerenciar jobs no JES (Job Entry Subsystem).
     * Comandos úteis:
        - ST – Visualiza o status dos jobs ativos;
-       - DA – Lista os datasets alocados;
+       - DA – Active users;
        - LOG – Exibe o log do sistema;
-       - HASPLOG – Mostra mensagens do JES. 
+       - H – Held output queue. 
+
+<img width="1409" height="769" alt="image" src="https://github.com/user-attachments/assets/9e986ed1-1fd8-4d1a-8f37-9743210ee026" />
+       
     
-# JESMSGLG / JESYSMSG / JOBLOG
+# Logs dos Jobs
+JESMSGLG / JESYSMSG / JOBLOG
+
     * Esses logs são essenciais para entender o comportamento do job:
       - JESMSGLG: Mensagens do JES sobre o job (início, término, alocação de recursos);
       - JESYSMSG: Mensagens do sistema operacional (erros, alocações, chamadas de sistema);
@@ -43,7 +48,8 @@ Este roteiro detalhará os seguintes tópicos:
 <img width="1439" height="291" alt="image" src="https://github.com/user-attachments/assets/230de142-22e6-4d8c-88bb-1663fad800e2" />
 
 
-# Checklist de Diagnóstico para Jobs com retorno diferente de zero (RC ≠ 0)
+# Checklist de Diagnóstico
+ Utilizado para Jobs com retorno diferente de zero (RC ≠ 0)
    
 |RC-Return Code|Significado|Ação Recomendada|
 |--------------|-----------|----------------|
