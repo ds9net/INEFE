@@ -29,10 +29,10 @@ Significado dos ícones encontrados nos textos a seguir:
 
 - [Principais consultas de Jobs: SDSF, JESMSGLG/JESYSMSG/JOBLOG.](https://github.com/ds9net/INEFE/blob/Roteiros/r2-01-Principais-consultas-de-Jobs.md)
     
-- [Checklist de diagnóstico para jobs anormais (JCL errors, RC≠0)](https://github.com/ds9net/INEFE/edit/Roteiros/r2-01-Principais-consultas-de-Jobs.md#checklist-de)
-    1. RC 04 → Warning (revisar lógica);
-    2. RC 08/12 → Erro esperado de aplicação;
-    3. RC 16/20+ → Falha estrutural ou de ambiente.    
+- [Checklist de diagnóstico para jobs anormais (JCL errors, RC≠0)](https://github.com/ds9net/INEFE/blob/Roteiros/r2-01-Principais-consultas-de-Jobs.md#checklist-de-diagn%C3%B3stico)
+    1. [RC 04 → Warning (revisar lógica)](https://github.com/ds9net/INEFE/blob/Roteiros/r2-01-Principais-consultas-de-Jobs.md#checklist-de-diagn%C3%B3stico);
+    2. [RC 08/12 → Erro esperado de aplicação](https://github.com/ds9net/INEFE/blob/Roteiros/r2-01-Principais-consultas-de-Jobs.md#checklist-de-diagn%C3%B3stico);
+    3. [RC 16/20+ → Falha estrutural ou de ambiente](https://github.com/ds9net/INEFE/blob/Roteiros/r2-01-Principais-consultas-de-Jobs.md#checklist-de-diagn%C3%B3stico).    
 ## 3) Diagnóstico de Subsistemas
 - DB2:
     1. Analisar objetos inválidos, identificar deadlocks e locks.
