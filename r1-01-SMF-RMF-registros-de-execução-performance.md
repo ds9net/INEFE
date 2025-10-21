@@ -12,12 +12,12 @@
 
 :pushpin: SMF/RMF: registros de execução e performance (CPU, memória, I/O, workloads).
 
-:point_right: O SMF - System Management Facility - é um produto IBM, componente do z/OS, responsável pela captura e
+:point_right: O **SMF** - *System Management Facility* - é um produto IBM, componente do z/OS, responsável pela captura e
 armazenamento de informações diversas sobre o funcionamento e uso de
 diversos outros produtos, inclusive do próprio sistema operacional.
 O SMF possui diversos tipos de registros, para diferentes finalidades, que
 podem ser processados, através de softwares de terceiros, ou até mesmo pelo
-RMF - Resource Measurement Facilty, para gerar os mais diversos tipos de relatórios, seja sobre acessos a
+**RMF** - *Resource Measurement Facilty*, para gerar os mais diversos tipos de relatórios, seja sobre acessos a
 determinados DATASETs, seja sobre informações de performance, entre outras
 finalidades. 
 
@@ -36,7 +36,10 @@ finalidades.
 
 :compass: SMF, RMF, CPU, MEMÓRIA, I/O, WORKLOAD.
 
-:book: A seguir estão os detalhes de como extrair os dados dos datasets que armazenam as informações do SMF e como são formatados para análise. Observar que o HLQ (High Level Qualifier) do arquivo SYS1.MAN pode ser ajustado conforme o padrão corporativo. Este job pode ser schedulado/automatizado para executar em intervalos periódicos, exportando-se o arquivo final para um dashboard de monitoramento para visualização gráfica ou sumarização dos dados extraídos (CPU, MEM, I/O):
+:book: A seguir estão os detalhes de como extrair os dados dos datasets que armazenam as informações do SMF e como são formatados para análise. Observar que o HLQ (High Level Qualifier) do arquivo SYS1.MAN**x** pode ser ajustado conforme o padrão corporativo. Este job pode ser schedulado/automatizado para executar em intervalos periódicos, exportando-se o arquivo final para um dashboard de monitoramento com gráficos para visualisação dos dados extraídos (CPU, MEM, I/O):
+
+<img width="969" height="528" alt="image" src="https://github.com/user-attachments/assets/a0f4ad0a-bf7c-46e1-a7a5-e131dcb86db6" />
+
   
     . STEP1 (IFASMFDP)
        Extrai registros SMF dos datasets ativos (SYS1.MANx).
@@ -94,4 +97,7 @@ JCL:
 ```
 
 :globe_with_meridians: https://www.ibm.com/docs/en/z-decision-support/1.9.0?topic=performance-using-rmf-smf-data
+
 :globe_with_meridians: https://www.ibm.com/docs/en/z-backup-resiliency/1.2.0?topic=smf-data-extraction
+
+:globe_with_meridians: https://www.ibm.com/docs/en/zos/2.1.0?topic=ifasmfdp-specifying-parameters-smf-data-set-dump-program
