@@ -1,6 +1,6 @@
 :pushpin: Título do Roteiro
 
-:point_right: Descrição do(s) cenário(s) em que este roteiro pode ser aplicadado
+:point_right: Descrição do(s) cenário(s) em que este roteiro pode ser aplicado
 
 :compass: Palavras-chave para facilitar a indexação das buscas
 
@@ -23,13 +23,13 @@ SORTOUT LRECL OF Y IS DIFFERENT FROM SORTIN(NN) LRECL OF X - RC=0
 ```
 JCL:
 ```jcl
-//JOBNAME JOB (ACCT),'USER',MSGCLASS=X,CLASS=A
-//STEP1 EXEC PGM=ICETOOL
-//TOOLMSG DD SYSOUT=*
-//DFSMSG DD SYSOUT=*
-//ALL DD DSN=YOUR.INPUT.DATASET,DISP=SHR
-//D1 DD DSN=YOUR.OUTPUT.DATASET.COPY1,DISP=(NEW,CATLG,DELETE),
-//       DCB=(RECFM=FB,LRECL=80,BLKSIZE=0),SPACE=(CYL,(1,1))
+//INEFCOPY JOB (INEFE),'COPIAR ARQ COM ICETOOL',MSGCLASS=X,CLASS=A
+//COPY01   EXEC PGM=ICETOOL
+//TOOLMSG  DD SYSOUT=*
+//DFSMSG   DD SYSOUT=*
+//ALL      DD DSN=YOUR.INPUT.DATASET,DISP=SHR
+//D1       DD DSN=YOUR.OUTPUT.DATASET.COPY1,DISP=(NEW,CATLG,DELETE),
+//         DCB=(RECFM=FB,LRECL=80,BLKSIZE=0),SPACE=(CYL,(1,1))
 //TOOLIN DD *
   COPY FROM(ALL) TO(D1)
 /*
@@ -52,7 +52,8 @@ IEF142I INEFCOMP IEBGENER - STEP WAS EXECUTED - COND CODE 0012
 ```
 JCL:
 ```jcl
-//IEBGENER EXEC PGM=IEBGENER                               
+//INEFCOPY JOB (INEFE),'COPIAR ARQ COM IEBGENER',MSGCLASS=X,CLASS=A
+//COPY02   EXEC PGM=IEBGENER                               
 //SYSPRINT DD SYSOUT=*                                     
 //SYSUT1   DD DSN=KC03BFF.JCL.AULA.AULA06.V003B,DISP=SHR   
 //SYSUT2   DD DSN=KC03BFF.IEBGENER.COPY1,                  
